@@ -6,14 +6,15 @@ import time
 
 class PaintWidget(Widget):
     """
-    The main application logic
+    The main painter logic class
     """
-    i = 1.0
-    some = 1
-    on_touch = False
-    blue_percent = 1
-    red_percent = 1
-    green_percent = 1
+    def __init__(**kwargs):
+        self.i = kwargs.get(i) or 1.0
+        self.some = kwargs.get(i) or 1
+        self.on_touch = kwargs.get(i) or False
+        self.blue_percent = kwargs.get(i) or 1
+        self.red_percent = kwargs.get(i) or 1
+        self.green_percent = kwargs.get(i) or 1
 
     def on_touch_down(self, touch):
         """Action for push left button on mouse"""
